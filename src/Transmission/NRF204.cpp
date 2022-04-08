@@ -65,10 +65,10 @@ void NRF204::setup()
     while (!Serial) {
       // some boards need to wait to ensure access to serial over USB
     }
- 
+    Serial.println("Serial started");
     radio=RF24(this->cEPin, this->cSNPin);
     // initialize the transceiver on the SPI bus
-
+    Serial.println("Started RF24");
     if (!radio.begin()) {
       Serial.println("radio hardware is not responding!!");
       while (1) {} // hold in infinite loop

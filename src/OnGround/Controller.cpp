@@ -53,7 +53,9 @@ Radio::NRF204AircraftControllMessage Reader::getMessage(){
 }
 
 void Reader::run(){
-    this->radioTransmitter.send(this->getMessage());
+    Radio::NRF204AircraftControllMessage mesaj=this->getMessage();
+    this->radioTransmitter.send(mesaj);
     delay(1000);
+    
 }
 

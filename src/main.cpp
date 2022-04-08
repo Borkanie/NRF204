@@ -27,7 +27,7 @@ void loop()
 
 #ifdef TRANSMITTER
 Reader reader;
-AircraftController aircraftController;
+
 void setup()
 {
   // put your setup code here, to run once:
